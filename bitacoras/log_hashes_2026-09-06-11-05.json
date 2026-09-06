@@ -1,0 +1,22 @@
+{
+  "fecha": "2026-09-06",
+  "hora": "11:05",
+  "operacion": "verificacion_hashes",
+  "archivos": [
+    {
+      "ruta": "pruebas/prueba.txt",
+      "sha256_actual": "53c9a0d968c81409899924646b844a097ad1042791730e974f6efc81e7e34c2f",
+      "sha256_esperado": "2d067b5016c7ab1ccd4221b591714e1fb5f7311160e4e7418b094b50a3edbdf4",
+      "estado": "modificado"
+    }
+  ],
+  "resumen": {
+    "total_verificados": 1,
+    "sin_cambios": 0,
+    "modificados": 1,
+    "errores": 0,
+    "sin_referencia": 0
+  },
+  "alerta": true,
+  "estado_final": "completado_con_alertas"
+}

@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-09-06",
+  "hora": "11:25",
+  "operacion": "verificacion_hashes",
+  "archivos": [],
+  "resumen": {
+    "total_verificados": 0,
+    "sin_cambios": 0,
+    "modificados": 0,
+    "errores": 0,
+    "sin_referencia": 0
+  },
+  "alerta": false,
+  "estado_final": "completado"
+}
