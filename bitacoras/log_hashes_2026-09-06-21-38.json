@@ -1,0 +1,34 @@
+{
+  "fecha": "2026-09-06",
+  "hora": "21:38",
+  "operacion": "verificacion_hashes",
+  "archivos": [
+    {
+      "ruta": "pruebas/prueba.txt",
+      "sha256_actual": "2d067b5016c7ab1ccd4221b591714e1fb5f7311160e4e7418b094b50a3edbdf4",
+      "sha256_esperado": "2d067b5016c7ab1ccd4221b591714e1fb5f7311160e4e7418b094b50a3edbdf4",
+      "estado": "sin_cambios"
+    },
+    {
+      "ruta": "/etc/fstab",
+      "sha256_actual": "a9ad56d239219ea9cf0c63093c1e185b5ab2fb1ed90d01f96e3f16ca276676f4",
+      "sha256_esperado": "a9ad56d239219ea9cf0c63093c1e185b5ab2fb1ed90d01f96e3f16ca276676f4",
+      "estado": "sin_cambios"
+    },
+    {
+      "ruta": "pruebas/prueba_fstab.sha256",
+      "sha256_actual": "d8376be1885debd12fd4ede6bb467e8cb110f9f1b0c9800c8d4f9bfd4bfe0af3",
+      "sha256_esperado": "",
+      "estado": "sin_referencia"
+    }
+  ],
+  "resumen": {
+    "total_verificados": 3,
+    "sin_cambios": 2,
+    "modificados": 0,
+    "errores": 0,
+    "sin_referencia": 1
+  },
+  "alerta": true,
+  "estado_final": "completado_con_alertas"
+}

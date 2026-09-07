@@ -1,5 +1,9 @@
 {
   "archivos": [
-    "pruebas/prueba.txt"
+    "pruebas/prueba.txt",
+    "/etc/fstab",
+    "/etc/passwd",
+    "/etc/shadow",
+    "pruebas/fstab_prueba"
   ]
 }
