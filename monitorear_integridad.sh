@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-CONFIG="config_archivos.json"
-REFERENCIA="guardar-sha256.sha256"
+DIRECTORIO_SCRIPT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+CONFIG="$DIRECTORIO_SCRIPT/config_archivos.json"
+REFERENCIA="$DIRECTORIO_SCRIPT/guardar-sha256.sha256"
 
 # Fecha y hora de la ejecución
 MARCA_TIEMPO=$(date +%F-%H-%M)
@@ -9,7 +11,7 @@ FECHA=$(date +%F)
 HORA=$(date +%H:%M)
 
 # Nombre de la bitácora
-CARPETA_BITACORAS="bitacoras"
+CARPETA_BITACORAS="$DIRECTORIO_SCRIPT/bitacoras"
 mkdir -p "$CARPETA_BITACORAS"
 
 BITACORA="$CARPETA_BITACORAS/log_hashes_${MARCA_TIEMPO}.json"
@@ -38,7 +40,7 @@ while IFS= read -r archivo; do
     if [ ! -f "$archivo" ]; then
         echo "[ERROR] No existe o no es un archivo regular: $archivo"
 
-    elif ! resultado=$(sha256sum -- "$archivo"); then
+    elif ! resultado=$(sudo sha256sum -- "$archivo"); then
         echo "[ERROR] No se pudo calcular la huella: $archivo"
 
     else
@@ -130,7 +132,7 @@ reporte=$(jq -n \
 
 # Mostrar alerta si hubo algún problema
 if jq -e '.alerta' <<< "$reporte" > /dev/null; then
-    echo "[ALERTA] Se detectaron modificaciones, errores o referencias faltantes."
+    echo "[ALERTA] Se detectaron modificaciones en archivos monitoreados."
 fi
 
 
